@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC</title>
+
+</head>
+<body>
+<h1> Lista de Eventos</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Show</th>
+        <th>Local</th>
+        <th>Data</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="evento: ${eventos}" >
+        <td th:text="${evento.nomeShow}">Show</td>
+        <td th:text="${evento.local}" >Local</td>
+        <td th:text="${evento.data}" >Data</td>
+    </tr>
+    </tbody>
+</table>
+
+<hr>
+</body>
+</html>
